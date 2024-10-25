@@ -64,12 +64,12 @@ async def checking_access(user_id, button=None):
         if button is None:
             button = ButtonMaker()
         button.url_button(
-            "ɢᴇɴᴇʀᴀᴛᴇ\nɴᴇᴡ ᴛᴏᴋᴇɴ",
+            "Gᴇɴᴇʀᴀᴛᴇ\nNᴇᴡ Tᴏᴋᴇɴ",
             short_url(f"https://redirect.z-mirror.eu.org/{bot_name}/{token}")
         )
         tmsg = (
-            "You need to generate a new <b>Token</b>."
-            f"\n➜ <b>Validity</b>: {get_readable_time(config_dict["TOKEN_TIMEOUT"])}"
+            "Yᴏᴜ Nᴇᴇᴅ Tᴏ Gᴇɴᴇʀᴀᴛᴇ A Nᴇᴡ <b>Tᴏᴋᴇɴ</b>."
+            f"\n➜ <b>Vᴀʟɪᴅɪᴛʏ</b>: {get_readable_time(config_dict["TOKEN_TIMEOUT"])}"
         )
         return (
             tmsg,
@@ -181,8 +181,8 @@ async def start(client, message):
                 ttime
             )
         msg = (
-            "<b>Your token refreshed successfully!</b>\n"
-            f"➜ Validity: {get_readable_time(int(config_dict["TOKEN_TIMEOUT"]))}\n\n"
+            "<b>Yᴏᴜʀ Tᴏᴋᴇɴ Rᴇғʀᴇsʜᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!</b>\n"
+            f"➜ Vᴀʟɪᴅɪᴛʏ: {get_readable_time(int(config_dict["TOKEN_TIMEOUT"]))}\n\n"
             "<b>Your Limites:</b>\n"
             f"➜ {config_dict["USER_MAX_TASKS"]} parallal tasks.\n"
         )
@@ -196,7 +196,7 @@ async def start(client, message):
     ):
         start_string = "Bot Started.\n" \
                        "Now I will send all of your stuffs here.\n" \
-                       "Use me at: @Z_Mirror"
+                       "Use me at: @RiyaXLeech_Bot"
     elif (
         not config_dict["DM_MODE"]
         and message.chat.type != message.chat.type.SUPERGROUP
