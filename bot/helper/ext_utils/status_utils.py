@@ -31,20 +31,20 @@ SIZE_UNITS = [
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Upload 📤"
-    STATUS_DOWNLOADING = "Download 📥"
-    STATUS_CLONING = "Clone 🔃"
-    STATUS_QUEUEDL = "QueueDL ⏳"
-    STATUS_QUEUEUP = "QueueUL ⏳"
-    STATUS_PAUSED = "Paused ⛔️"
-    STATUS_ARCHIVING = "Archive 🛠"
-    STATUS_EXTRACTING = "Extract 📂"
-    STATUS_SPLITTING = "Split ✂️"
-    STATUS_CHECKING = "CheckUp ⏱"
-    STATUS_SEEDING = "Seed 🌧"
-    STATUS_SAMVID = "SampleVid 🎬"
-    STATUS_CONVERTING = "Convert ♻️"
-    STATUS_METADATA = "Metadata 📝"
+    STATUS_UPLOADING = "uᴘʟᴏᴀᴅ 📤"
+    STATUS_DOWNLOADING = "Dᴏᴡɴʟᴏᴀᴅ 📥"
+    STATUS_CLONING = "Cʟᴏɴᴇ 🔃"
+    STATUS_QUEUEDL = "Qᴜᴇᴜᴇᴅʟ ⏳"
+    STATUS_QUEUEUP = "Qᴜᴇᴜᴇᴜʟ ⏳"
+    STATUS_PAUSED = "Pᴀᴜsᴇᴅ ⛔️"
+    STATUS_ARCHIVING = "Aʀᴄʜɪᴠᴇ 🛠"
+    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛ 📂"
+    STATUS_SPLITTING = "Sᴘʟɪᴛ ✂️"
+    STATUS_CHECKING = "Cʜᴇᴄᴋᴜᴘ ⏱"
+    STATUS_SEEDING = "Sᴇᴇᴅ 🌧"
+    STATUS_SAMVID = "Sᴀᴍᴘʟᴇᴠɪᴅ 🎬"
+    STATUS_CONVERTING = "Cᴏɴᴠᴇʀᴛ ♻️"
+    STATUS_METADATA = "Mᴇᴛᴀᴅᴀᴛᴀ 📝"
 
 
 STATUSES = {
