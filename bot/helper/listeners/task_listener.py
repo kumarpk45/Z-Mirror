@@ -446,7 +446,7 @@ class TaskListener(TaskConfig):
             f"<b><i>{escape(self.name)}</i></b>"
             f"\n<b>cc</b>: <i>{self.tag}</i>"
         )
-        gmsg = f"\n<b>Hey {self.tag}!\nYour job is done.</b>"
+        gmsg = f"\n<b>Hᴇʏ {self.tag}!\nYᴏᴜʀ Jᴏʙ Is Dᴏɴᴇ.</b>"
         msg = (
             f"\n\n<code>Size  </code>: {get_readable_file_size(self.size)}"
             f"\n<code>Past  </code>: {get_readable_time(time() - self.time)}"
@@ -457,12 +457,12 @@ class TaskListener(TaskConfig):
             if rclonePath == ""
             else f"\n\n<code>Path  </code>: {rclonePath}"
         )
-        msg_ = "\n\n<b><i>Link has been sent in your DM.</b></i>"
+        msg_ = "\n\n<b><i>Lɪɴᴋ Hᴀs Bᴇᴇɴ Sᴇɴᴛ Iɴ Yᴏᴜʀ Dᴍ.</b></i>"
         if self.is_leech:
             msg += f"\n<code>Files </code>: {folders}\n"
             if mime_type != 0:
                 msg += f"<code>Error </code>: {mime_type}\n"
-            msg_ = "\n<b><i>Files has been sent in your DM.</b></i>"
+            msg_ = "\n<b><i>Fɪʟᴇs Hᴀs Bᴇᴇɴ Sᴇɴᴛ Iɴ Yᴏᴜʀ Dᴍ.</b></i>"
             if not self.dm_message:
                 if not files:
                     await send_message(
@@ -600,14 +600,14 @@ class TaskListener(TaskConfig):
                     if mime_type == "Folder":
                         share_url += "/"
                     buttons.url_button(
-                        "ʀᴄʟᴏɴᴇ\nʟɪɴᴋ",
+                        "Rᴄʟᴏɴᴇ\nLɪɴᴋ",
                         share_url
                     )
                 elif not rclonePath:
                     INDEX_URL = ""
                     if self.private_link:
                         INDEX_URL = self.user_dict.get(
-                            "index_url",
+                            "Iɴᴅᴇx_ᴜʀʟ",
                             ""
                         ) or ""
                     elif config_dict["INDEX_URL"]:
@@ -616,12 +616,12 @@ class TaskListener(TaskConfig):
                         share_url = f"{INDEX_URL}findpath?id={dir_id}"
                         if mime_type == "Folder":
                             buttons.url_button(
-                                "ᴅɪʀᴇᴄᴛ\nꜰɪʟᴇ ʟɪɴᴋ",
+                                "Dɪʀᴇᴄᴛ\nFɪʟᴇ ʟɪɴᴋ",
                                 share_url
                             )
                         else:
                             buttons.url_button(
-                                "ᴅɪʀᴇᴄᴛ\nꜰᴏʟᴅᴇʀ ʟɪɴᴋ",
+                                "Dɪʀᴇᴄᴛ\nFᴏʟᴅᴇʀ ʟɪɴᴋ",
                                 share_url
                             )
                             if mime_type.startswith(
@@ -633,7 +633,7 @@ class TaskListener(TaskConfig):
                             ):
                                 share_urls = f"{INDEX_URL}findpath?id={dir_id}&view=true"
                                 buttons.url_button(
-                                    "ᴠɪᴇᴡ\nʟɪɴᴋ",
+                                    "Vɪᴇᴡ\nLɪɴᴋ",
                                     share_urls
                                 )
                 buttons = extra_btns(buttons)
@@ -659,7 +659,7 @@ class TaskListener(TaskConfig):
                         and config_dict["DISABLE_DRIVE_LINK"]
                     ):
                         buttons.url_button(
-                            "ᴅʀɪᴠᴇ\nʟɪɴᴋ",
+                            "Dʀɪᴠᴇ\nʟɪɴᴋ",
                             link,
                             "header"
                         )
@@ -721,7 +721,7 @@ class TaskListener(TaskConfig):
                 del task_dict[self.mid]
             count = len(task_dict)
         await self.remove_from_same_dir()
-        msg = f"Sorry {self.tag}!\nYour download has been stopped."
+        msg = f"Sorry {self.tag}!\nYᴏᴜʀ ᴅᴏᴡɴʟᴏᴀᴅ ʜᴀs ʙᴇᴇɴ sᴛᴏᴘᴘᴇᴅ."
         msg += f"\n\n<code>Reason </code>: {escape(str(error))}"
         msg += f"\n<code>Past   </code>: {get_readable_time(time() - self.time)}"
         msg += f"\n<code>Mode   </code>: {self.mode}"
@@ -794,7 +794,7 @@ class TaskListener(TaskConfig):
             if self.mid in task_dict:
                 del task_dict[self.mid]
             count = len(task_dict)
-        msg = f"Sorry {self.tag}!\nYour upload has been stopped."
+        msg = f"Sorry {self.tag}!\nYᴏᴜʀ ᴜᴘʟᴏᴀᴅ ʜᴀs ʙᴇᴇɴ sᴛᴏᴘᴘᴇᴅ."
         msg += f"\n\n<code>Reason </code>: {escape(str(error))}"
         msg += f"\n<code>Past   </code>: {get_readable_time(time() - self.time)}"
         msg += f"\n<code>Mode   </code>: {self.mode}"
