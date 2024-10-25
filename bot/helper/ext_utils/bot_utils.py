@@ -79,7 +79,7 @@ def _build_command_usage(help_dict, command_key):
             f"help {command_key} {name}"
         )
     buttons.data_button(
-        "ᴄʟᴏꜱᴇ",
+        "Cʟᴏꜱᴇ",
         "help close"
     )
     COMMAND_USAGE[command_key] = [
@@ -121,7 +121,7 @@ def bt_selection_buttons(id_):
     BASE_URL = config_dict["BASE_URL"]
     if config_dict["WEB_PINCODE"]:
         buttons.url_button(
-            "ꜱᴇʟᴇᴄᴛ ꜰɪʟᴇꜱ",
+            "Sᴇʟᴇᴄᴛ Fɪʟᴇꜱ",
             f"{BASE_URL}/app/files/{id_}"
         )
         buttons.data_button(
@@ -130,11 +130,11 @@ def bt_selection_buttons(id_):
         )
     else:
         buttons.url_button(
-            "ꜱᴇʟᴇᴄᴛ ꜰɪʟᴇꜱ",
+            "Sᴇʟᴇᴄᴛ Fɪʟᴇꜱ",
             f"{BASE_URL}/app/files/{id_}?pin_code={pincode}"
         )
     buttons.data_button(
-        "ᴅᴏɴᴇ ꜱᴇʟᴇᴄᴛɪɴɢ",
+        "Dᴏɴᴇ Sᴇʟᴇᴄᴛɪɴɢ",
         f"sel done {gid} {id_}"
     )
     buttons.data_button(
@@ -162,83 +162,83 @@ async def set_commands(client):
         await client.set_bot_commands([
             BotCommand(
                 f"{BotCommands.MirrorCommand[0]}",
-                "ᴍɪʀʀᴏʀ ᴅɪʀᴇᴄᴛ ʟɪɴᴋꜱ ᴜꜱɪɴɢ ᴀʀɪᴀ2ᴄ"
+                "Mɪʀʀᴏʀ Dɪʀᴇᴄᴛ Lɪɴᴋꜱ ᴜꜱɪɴɢ Aʀɪᴀ2ᴄ"
             ),
             BotCommand(
                 f"{BotCommands.JdMirrorCommand[0]}",
-                "ᴍɪʀʀᴏʀ ᴊᴅᴏᴡɴʟᴏᴀᴅᴇʀ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ"
+                "Mɪʀʀᴏʀ Jᴅᴏᴡɴʟᴏᴀᴅᴇʀ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ"
             ),
             BotCommand(
                 f"{BotCommands.NzbMirrorCommand[0]}",
-                "ᴍɪʀʀᴏʀ ꜱᴀʙɴᴢʙᴅ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ ᴏʀ ꜰɪʟᴇꜱ"
+                "Mɪʀʀᴏʀ Sᴀʙɴᴢʙᴅ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ Oʀ Fɪʟᴇꜱ"
             ),
             BotCommand(
                 f"{BotCommands.QbMirrorCommand[0]}",
-                "ᴍɪʀʀᴏʀ Qʙɪᴛ-ᴛᴏʀʀᴇɴᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ ᴏʀ ꜰɪʟᴇꜱ"
+                "Mɪʀʀᴏʀ Qʙɪᴛ-Tᴏʀʀᴇɴᴛ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ Oʀ Fɪʟᴇꜱ"
             ),
             BotCommand(
                 f"{BotCommands.YtdlCommand[0]}",
-                "ᴍɪʀʀᴏʀ ʏᴛ-ᴅʟᴘ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ"
+                "Mɪʀʀᴏʀ Yᴛ-ᴅʟᴘ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ"
             ),
             BotCommand(
                 f"{BotCommands.LeechCommand[0]}",
-                "ʟᴇᴇᴄʜ ᴅɪʀᴇᴄᴛ ʟɪɴᴋꜱ ᴜꜱɪɴɢ ᴀʀɪᴀ2ᴄ"
+                "Lᴇᴇᴄʜ Dɪʀᴇᴄᴛ Lɪɴᴋꜱ Uꜱɪɴɢ Aʀɪᴀ2ᴄ"
             ),
             BotCommand(
                 f"{BotCommands.JdLeechCommand[0]}",
-                "ʟᴇᴇᴄʜ ᴊᴅᴏᴡɴʟᴏᴀᴅᴇʀ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ"
+                "Lᴇᴇᴄʜ Jᴅᴏᴡɴʟᴏᴀᴅᴇʀ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ"
             ),
             BotCommand(
                 f"{BotCommands.NzbLeechCommand[0]}",
-                "ʟᴇᴇᴄʜ ꜱᴀʙɴᴢʙᴅ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ ᴏʀ ꜰɪʟᴇꜱ"
+                "Lᴇᴇᴄʜ Sᴀʙɴᴢʙᴅ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ Oʀ Fɪʟᴇꜱ"
             ),
             BotCommand(
                 f"{BotCommands.QbLeechCommand[0]}",
-                "ʟᴇᴇᴄʜ Qʙɪᴛ-ᴛᴏʀʀᴇɴᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ ᴏʀ ꜰɪʟᴇꜱ"
+                "Lᴇᴇᴄʜ Qʙɪᴛ-Tᴏʀʀᴇɴᴛ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ Oʀ Fɪʟᴇꜱ"
             ),
             BotCommand(
                 f"{BotCommands.YtdlLeechCommand[0]}",
-                "ʟᴇᴇᴄʜ ʏᴛ-ᴅʟᴘ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋꜱ"
+                "Lᴇᴇᴄʜ Yᴛ-ᴅʟᴘ Sᴜᴘᴘᴏʀᴛᴇᴅ Lɪɴᴋꜱ"
             ),
             BotCommand(
                 f"{BotCommands.CloneCommand}",
-                "ᴄᴏᴘʏ ꜰɪʟᴇ ᴏʀ ꜰᴏʟᴅᴇʀ ᴛᴏ ᴛʜᴇ ᴅʀɪᴠᴇ"
+                "Cᴏᴘʏ Fɪʟᴇ Oʀ Fᴏʟᴅᴇʀ Tᴏ Tʜᴇ Dʀɪᴠᴇ"
             ),
             BotCommand(
                 f"{BotCommands.CountCommand}",
-                "[ᴅʀɪᴠᴇ ᴜʀʟ]: ᴄᴏᴜɴᴛ ꜰɪʟᴇ ᴏʀ ꜰᴏʟᴅᴇʀ ᴏꜰ ᴛʜᴇ ɢᴏᴏɢʟᴇ ᴅʀɪᴠᴇ"
+                "[Dʀɪᴠᴇ Uʀʟ]: Cᴏᴜɴᴛ Fɪʟᴇ Oʀ Fᴏʟᴅᴇʀ Oꜰ Tʜᴇ Gᴏᴏɢʟᴇ Dʀɪᴠᴇ"
             ),
             BotCommand(
                 f"{BotCommands.StatusCommand[0]}",
-                "ɢᴇᴛ ᴀʟʟ ᴛᴀꜱᴋꜱ ꜱᴛᴀᴛᴜꜱ ᴍᴇꜱꜱᴀɢᴇ"
+                "Gᴇᴛ Aʟʟ Tᴀꜱᴋꜱ Sᴛᴀᴛᴜꜱ Mᴇꜱꜱᴀɢᴇ"
             ),
             BotCommand(
                 f"{BotCommands.StatsCommand[0]}",
-                "ᴄʜᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛꜱ"
+                "Cʜᴇᴄᴋ Bᴏᴛ Sᴛᴀᴛꜱ"
             ),
             BotCommand(
                 f"{BotCommands.CancelTaskCommand[0]}",
-                "ᴄᴀɴᴄᴇʟ ᴀ ᴛᴀꜱᴋ"
+                "Cᴀɴᴄᴇʟ A Tᴀꜱᴋ"
             ),
             BotCommand(
                 f"{BotCommands.CancelAllCommand}",
-                "ᴄᴀɴᴄᴇʟ ᴀʟʟ ᴛᴀꜱᴋꜱ ᴡʜɪᴄʜ ᴀᴅᴅᴇᴅ ʙʏ ʏᴏᴜ"
+                "Cᴀɴᴄᴇʟ Aʟʟ Tᴀꜱᴋꜱ Wʜɪᴄʜ Aᴅᴅᴇᴅ Bʏ Yᴏᴜ"
             ),
             BotCommand(
                 f"{BotCommands.ListCommand}",
-                "ꜱᴇᴀʀᴄʜ ɪɴ ᴅʀɪᴠᴇ"
+                "Sᴇᴀʀᴄʜ Iɴ Dʀɪᴠᴇ"
             ),
             BotCommand(
                 f"{BotCommands.SearchCommand}",
-                "ꜱᴇᴀʀᴄʜ ɪɴ ᴛᴏʀʀᴇɴᴛ"
+                "Sᴇᴀʀᴄʜ Iɴ Tᴏʀʀᴇɴᴛ"
             ),
             BotCommand(
                 f"{BotCommands.UserSetCommand[0]}",
-                "ᴜꜱᴇʀꜱ ꜱᴇᴛᴛɪɴɢꜱ"
+                "Uꜱᴇʀꜱ Sᴇᴛᴛɪɴɢꜱ"
             ),
             BotCommand(
                 f"{BotCommands.HelpCommand}",
-                "ɢᴇᴛ ᴅᴇᴛᴀɪʟᴇᴅ ʜᴇʟᴘ"
+                "Gᴇᴛ Dᴇᴛᴀɪʟᴇᴅ Hᴇʟᴘ"
             ),
         ])
 
