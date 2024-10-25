@@ -362,51 +362,17 @@ async def get_user_settings(from_user):
 
     if user_dict:
         buttons.data_button(
-            "ʀᴇꜱᴇᴛ ᴀʟʟ\nᴄʜᴀɴɢᴇꜱ",
+            "Rᴇꜱᴇᴛ Aʟʟ\nCʜᴀɴɢᴇꜱ",
             f"userset {user_id} reset"
         )
 
     buttons.data_button(
-        "ᴄʟᴏꜱᴇ",
+        "Cʟᴏꜱᴇ",
         f"userset {user_id} close",
         position="footer"
     )
 
-    text = f"""
-<u>Settings for {name}</u>
-
-<code>TG Premium Status:</code> <b>{IS_PREMIUM_USER}</b>
-
-<code>Leech Type       :</code> <b>{ltype}</b>
-<code>Leech Prefix     :</code> <b>{lprefix}</b>
-<code>Leech Suffix     :</code> <b>{lsuffix}</b>
-<code>Leech Cap Font   :</code> <b>{lcapfont}</b>
-<code>Leech Split Size :</code> <b>{split_size}</b>
-<code>Leech Dest       :</code> <b>{leech_dest}</b>
-<code>Metadata Text    :</code> <b>{metatxt}</b>
-<code>Attachment Url   :</code> <b>{attachmenturl}</b>
-
-<code>Thumbnail        :</code> <b>{thumbmsg}</b>
-<code>Thumb Layout     :</code> <b>{thumb_layout}</b>
-<code>Equal Splits     :</code> <b>{equal_splits}</b>
-<code>Media Group      :</code> <b>{media_group}</b>
-<code>Upload Client    :</code> <b>{leech_method} session</b>
-<code>Hybrid Upload    :</code> <b>{mixed_leech}</b>
-
-<code>Rclone Config    :</code> <b>{rccmsg}</b>
-<code>Rclone Path      :</code> <b>{rccpath}</b>
-
-<code>Gdrive Token     :</code> <b>{tokenmsg}</b>
-<code>Gdrive ID        :</code> <b>{gdrive_id}</b>
-<code>Index Link       :</code> <b>{index}</b>
-
-<code>Stop Duplicate   :</code> <b>{sd_msg}</b>
-<code>Default Upload   :</code> <b>{dum}</b>
-<code>Upload Paths     :</code> <b>{upload_paths}</b>
-<code>Name Substitute  :</code> <b>{ns_msg}</b>
-<code>Extension Filter :</code> <b>{ex_ex}</b>
-<code>YT-DLP Options   :</code> <b>{escape(ytopt)}</b>
-"""
+    text = BotTheme('USER_SETTING', NAME=name, ID=user_id, USERNAME=f'@{from_user.username}', LANG=Language.get(lc).display_name() if (lc := from_user.language_code) else "N/A", DC=from_user.dc_id)
 
     return (
         text,
