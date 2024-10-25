@@ -97,11 +97,11 @@ async def get_buttons(id=None, key=None, edit_type=None):
     buttons = ButtonMaker()
     if key is None:
         buttons.data_button(
-            "ᴄᴏɴꜰɪɢ\nᴠᴀʀɪᴀʙʟᴇꜱ",
+            "Cᴏɴꜰɪɢ\nVᴀʀɪᴀʙʟᴇꜱ",
             "botset var"
         )
         buttons.data_button(
-            "ᴘʀɪᴠᴀᴛᴇ\nꜰɪʟᴇꜱ",
+            "Pʀɪᴠᴀᴛᴇ\nꜰɪʟᴇꜱ",
             "botset private"
         )
         buttons.data_button(
@@ -109,19 +109,19 @@ async def get_buttons(id=None, key=None, edit_type=None):
             "botset qbit"
         )
         buttons.data_button(
-            "ᴀʀɪᴀ2ᴄ\nꜱᴇᴛᴛɪɴɢꜱ",
+            "Aʀɪᴀ2ᴄ\nꜱᴇᴛᴛɪɴɢꜱ",
             "botset aria"
         )
         buttons.data_button(
-            "ꜱᴀʙɴᴢʙᴅ\nꜱᴇᴛᴛɪɴɢꜱ",
+            "Sᴀʙɴᴢʙᴅ\nꜱᴇᴛᴛɪɴɢꜱ",
             "botset nzb"
         )
         buttons.data_button(
-            "ᴊᴅᴏᴡɴʟᴏᴀᴅᴇʀ\nꜱʏɴᴄ",
+            "Jᴅᴏᴡɴʟᴏᴀᴅᴇʀ\nꜱʏɴᴄ",
             "botset syncjd"
         )
         buttons.data_button(
-            "ᴄʟᴏꜱᴇ",
+            "Cʟᴏꜱᴇ",
             "botset close",
             position="footer"
         )
@@ -140,7 +140,7 @@ async def get_buttons(id=None, key=None, edit_type=None):
                 "BOT_TOKEN"
             ]:
                 buttons.data_button(
-                    "ᴅᴇꜰᴀᴜʟᴛ",
+                    "Dᴇꜰᴀᴜʟᴛ",
                     f"botset resetvar {key}"
                 )
             buttons.data_button(
@@ -181,15 +181,15 @@ async def get_buttons(id=None, key=None, edit_type=None):
             )
             if key != "newkey":
                 buttons.data_button(
-                    "ᴅᴇꜰᴀᴜʟᴛ",
+                    "Dᴇꜰᴀᴜʟᴛ",
                     f"botset resetaria {key}"
                 )
                 buttons.data_button(
-                    "ᴇᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
+                    "Eᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
                     f"botset emptyaria {key}"
                 )
             buttons.data_button(
-                "ᴄʟᴏꜱᴇ",
+                "Cʟᴏꜱᴇ",
                 "botset close"
             )
             msg = (
@@ -199,33 +199,33 @@ async def get_buttons(id=None, key=None, edit_type=None):
             )
         elif edit_type == "qbitvar":
             buttons.data_button(
-                "ʙᴀᴄᴋ",
+                "Bᴀᴄᴋ",
                 "botset qbit"
             )
             buttons.data_button(
-                "ᴇᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
+                "Eᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
                 f"botset emptyqbit {key}"
             )
             buttons.data_button(
-                "ᴄʟᴏꜱᴇ",
+                "Cʟᴏꜱᴇ",
                 "botset close"
             )
             msg = f"Send a valid value for {key}. Current value is '{qbit_options[key]}'. Timeout: 60 sec"
         elif edit_type == "nzbvar":
             buttons.data_button(
-                "ʙᴀᴄᴋ",
+                "Bᴀᴄᴋ",
                 "botset nzb"
             )
             buttons.data_button(
-                "ᴅᴇꜰᴀᴜʟᴛ",
+                "Dᴇꜰᴀᴜʟᴛ",
                 f"botset resetnzb {key}"
             )
             buttons.data_button(
-                "ᴇᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
+                "Eᴍᴘᴛʏ\nꜱᴛʀɪɴɢ",
                 f"botset emptynzb {key}"
             )
             buttons.data_button(
-                "ᴄʟᴏꜱᴇ",
+                "Cʟᴏꜱᴇ",
                 "botset close"
             )
             msg = f"Send a valid value for {key}. Current value is '{nzb_options[key]}'.\nIf the value is list then seperate them by space or ,\nExample: .exe,info or .exe .info\nTimeout: 60 sec"
@@ -241,16 +241,16 @@ async def get_buttons(id=None, key=None, edit_type=None):
                 )
             )
             buttons.data_button(
-                "ʙᴀᴄᴋ",
+                "Bᴀᴄᴋ",
                 f"botset nzbser{index}"
             )
             if key != "newser":
                 buttons.data_button(
-                    "ᴇᴍᴘᴛʏ",
+                    "Eᴍᴘᴛʏ",
                     f"botset emptyserkey {index} {key}"
                 )
             buttons.data_button(
-                "ᴄʟᴏꜱᴇ",
+                "Cʟᴏꜱᴇ",
                 "botset close"
             )
             if key == "newser":
