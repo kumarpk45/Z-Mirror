@@ -191,8 +191,8 @@ def get_progress_bar_string(pct):
         100
     )
     cFull = int(p // 10)
-    p_str = "█" * cFull
-    p_str += "▒" * (10 - cFull)
+    p_str = "⚫" * cFull
+    p_str += "⚪" * (10 - cFull)
     return f"{p_str}"
 
 
@@ -252,14 +252,14 @@ async def get_readable_message(
             and int(config_dict["AUTO_DELETE_MESSAGE_DURATION"]) > 0
         ):
             msg += (
-                f"<b><i>\n#Zee{index + start_position}: "
+                f"<b><i>\n#𝐑𝐢𝐲𝐚𝐗{index + start_position}: "
                 f"{escape(f"{task.name()}")}\n</i></b>"
                 if elapse <= config_dict["AUTO_DELETE_MESSAGE_DURATION"]
                 else f"\n<b>#Zee{index + start_position}...(Processing)</b>"
             )
         else:
             msg += (
-                f"<b><i>\n#Bot{index + start_position}: "
+                f"<b><i>\n#𝐑𝐢𝐲𝐚𝐗{index + start_position}: "
                 f"{escape(f"{task.name()}")}\n</i></b>"
             )
         if tstatus not in [
@@ -275,14 +275,14 @@ async def get_readable_message(
             )
             msg += (
                 f"\n{get_progress_bar_string(progress)} » <b><i>{progress}</i></b>"
-                f"\n<code>┠⚡Sᴛᴀᴛᴜs :</code> <b>{tstatus}</b>"
-                f"\n<code>┠🌟Dᴏɴᴇ   :</code> {task.processed_bytes()} of {task.size()}"
-                f"\n<code>┠🚀Sᴘᴇᴇᴅ  :</code> {task.speed()}"
-                f"\n<code>┠ ⏳ETA    :</code> {task.eta()}"
-                f"\n<code>┠🔹Pᴀsᴛ   :</code> {elapsed}"
-                f"\n<code>┠🪪Usᴇʀ   :</code> <b>{user_tag}</b>"
-                f"\n<code>┠🆔ɪᴅ :</code> ||{task.listener.user_id}||"
-                f"\n<code>┠⏳Uᴘʟᴏᴀᴅ :</code> {task.listener.mode}"
+                f"\n<code>┠⚡Sᴛᴀᴛᴜs  :</code> <b>{tstatus}</b>"
+                f"\n<code>┠🌟Dᴏɴᴇ    :</code> {task.processed_bytes()} of {task.size()}"
+                f"\n<code>┠🚀Sᴘᴇᴇᴅ   :</code> {task.speed()}"
+                f"\n<code>┠⏳ETA     :</code> {task.eta()}"
+                f"\n<code>┠🔹Pᴀsᴛ    :</code> {elapsed}"
+                f"\n<code>┠🪪Usᴇʀ     :</code> <b>{user_tag}</b>"
+                f"\n<code>┠🆔ɪᴅ     :</code> ||{task.listener.user_id}||"
+                f"\n<code>┠⏳Uᴘʟᴏᴀᴅ  :</code> {task.listener.mode}"
                 f"\n<code>┠⚙️Eɴɢɪɴᴇ :</code> <b><i>{task.engine}</i></b>"
             )
             if hasattr(
@@ -291,7 +291,7 @@ async def get_readable_message(
             ):
                 try:
                     if playlist := task.playList():
-                        msg += f"\n<code>YtList :</code> {playlist}"
+                        msg += f"\n<code>Yᴛʟɪsᴛ :</code> {playlist}"
                 except:
                     pass
             if hasattr(
@@ -320,7 +320,7 @@ async def get_readable_message(
                 f"\n<code>┠🆔ɪᴅ :</code> ||{task.listener.user_id}||"
                 f"\n<code>┠⚙️Eɴɢɪɴᴇ :</code> {task.engine}"
             )
-        msg += f"\n┖⚠️ {cancel_task}\n\n"
+        msg += f"\n┠⚠️ {cancel_task}\n\n"
 
     if len(msg) == 0:
         if status == "All":
