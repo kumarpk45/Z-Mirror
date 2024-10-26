@@ -76,7 +76,7 @@ async def get_user_settings(from_user):
         ltype = "MEDIA"
 
     thumbmsg = (
-        "Added"
+        "Aᴅᴅᴇᴅ"
         if await aiopath.exists(thumbpath)
         else "Nᴏᴛ ᴀᴅᴅᴇᴅ"
     )
@@ -118,7 +118,7 @@ async def get_user_settings(from_user):
         "lprefix",
         False
     ):
-        lprefix = "Added"
+        lprefix = "Aᴅᴅᴇᴅ"
     elif (
         "lprefix" not in user_dict
         and (LP := config_dict["LEECH_FILENAME_PREFIX"])
@@ -209,16 +209,16 @@ async def get_user_settings(from_user):
         attachmenturl = "Nᴏᴛ ᴀᴅᴅᴇᴅ"
 
     buttons.data_button(
-        "ʟᴇᴇᴄʜ\nꜱᴇᴛᴛɪɴɢꜱ",
+        "Lᴇᴇᴄʜ\nꜱᴇᴛᴛɪɴɢꜱ",
         f"userset {user_id} leech"
     )
 
     buttons.data_button(
-        "ʀᴄʟᴏɴᴇ\nᴛᴏᴏʟꜱ",
+        "Rᴄʟᴏɴᴇ\nᴛᴏᴏʟꜱ",
         f"userset {user_id} rclone"
     )
     rccmsg = (
-        "Added"
+        "Aᴅᴅᴇᴅ"
         if await aiopath.exists(rclone_conf)
         else "Not Added"
     )
@@ -237,7 +237,7 @@ async def get_user_settings(from_user):
         f"userset {user_id} gdrive"
     )
     tokenmsg = (
-        "Added"
+        "Aᴅᴅᴇᴅ"
         if await aiopath.exists(token_pickle)
         else "Nᴏᴛ ᴀᴅᴅᴇᴅ"
     )
@@ -270,7 +270,7 @@ async def get_user_settings(from_user):
         sd_msg = "Dɪsᴀʙʟᴇᴅ"
 
     upload_paths = (
-        "Added"
+        "Aᴅᴅᴇᴅ"
         if user_dict.get(
             "upload_paths",
             False
