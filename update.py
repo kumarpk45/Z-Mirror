@@ -102,7 +102,7 @@ UPSTREAM_REPO = environ.get(
     ""
 )
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = "https://github.com/Dawn-India/Z-Mirror"
+    UPSTREAM_REPO = "https://github.com/kumarpk45/Z-Mirror"
 
 UPSTREAM_BRANCH = environ.get(
     "UPSTREAM_BRANCH",
@@ -122,7 +122,7 @@ if UPSTREAM_REPO is not None:
     update = urun(
         [
             f"git init -q \
-                     && git config --global user.email support@z-mirror.com \
+                     && git config --global user.email support@TamilLeech8 \
                      && git config --global user.name zee \
                      && git add . \
                      && git commit -sm update -q \
@@ -135,7 +135,7 @@ if UPSTREAM_REPO is not None:
 
     if update.returncode == 0:
         log_info("Successfully updated...")
-        log_info("Thanks For Using @Z_Mirror")
+        log_info("Thanks For Using @TamilLeech8")
     else:
         log_error("Error while getting latest updates.")
         log_error("Check if entered UPSTREAM_REPO is valid or not!")
