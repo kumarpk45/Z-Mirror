@@ -367,12 +367,16 @@ async def get_user_settings(from_user):
         )
 
     buttons.data_button(
-        "Cʟᴏꜱᴇ",
+        "ᴄʟᴏꜱᴇ",
         f"userset {user_id} close",
         position="footer"
     )
 
-    text = BotTheme('USER_SETTING', NAME=name, ID=user_id, USERNAME=f'@{from_user.username}', LANG=Language.get(lc).display_name() if (lc := from_user.language_code) else "N/A", DC=from_user.dc_id)
+    text = f"""
+<u>Settings for {name}</u>
+
+<code>TG Premium Status:</code> <b>{IS_PREMIUM_USER}</b>
+"""
 
     return (
         text,
